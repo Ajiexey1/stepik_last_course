@@ -16,3 +16,4 @@ class ProductPageLocators:
     ITEM_NAME_IN_BASKET = (By.XPATH, "//div[@id='messages']/div[1]//strong")
     ITEM_SUM = (By.CSS_SELECTOR, ".product_main .price_color")
     BASKET_SUM = (By.XPATH, "//div[@id='messages']/div[3]//strong")
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, ".alert.alert-safe")
