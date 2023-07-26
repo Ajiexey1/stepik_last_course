@@ -1,6 +1,17 @@
 from selenium.webdriver.common.by import By
 
 
+class BasePageLocators:
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    BASKET_BUTTON = (By.CSS_SELECTOR, ".btn-group > .btn")
+
+
+class BasketPageLocators:
+    EMPTY_BASKET_TEXT = (By.CSS_SELECTOR, "#content_inner>p>a")
+    BASKET_ITEMS = (By.CSS_SELECTOR, ".basket-items")
+
+
 class MainPageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
 
@@ -17,8 +28,3 @@ class ProductPageLocators:
     ITEM_SUM = (By.CSS_SELECTOR, ".product_main .price_color")
     BASKET_SUM = (By.XPATH, "//div[@id='messages']/div[3]//strong")
     SUCCESS_MESSAGE = (By.CSS_SELECTOR, ".alert.alert-safe")
-
-
-class BasePageLocators:
-    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
-    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
