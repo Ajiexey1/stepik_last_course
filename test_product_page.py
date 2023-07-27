@@ -50,7 +50,7 @@ def test_guest_should_see_login_link_on_product_page(browser):
     page.should_be_login_link()
 
 
-@pytest.mark.xfail
+@pytest.mark.need_review
 def test_guest_can_go_to_login_page_from_product_page(browser):
     link = Url_For_Product_Page
     page = ProductPage(browser, link)
@@ -68,7 +68,7 @@ def test_guest_cant_see_product_in_basket_opened_from_product_page(browser):
     page.empty_shopping_list_text()
 
 
-@pytest.mark.need_review
+
 def test_guest_can_see_product_in_basket(browser):
     link = Url_For_Product_Page
     page = ProductPage(browser, link)
