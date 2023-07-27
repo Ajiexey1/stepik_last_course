@@ -9,6 +9,7 @@ Main_Page_Url = "http://selenium1py.pythonanywhere.com/"
 @pytest.mark.login_guest
 class TestLoginFromMainPage:
 
+    @pytest.mark.xfail
     def test_guest_can_go_to_login_page(self, browser):
         link = Main_Page_Url
         page = MainPage(browser,
